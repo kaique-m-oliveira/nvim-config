@@ -1,44 +1,46 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.guicursor = '' -- Fat cursor 
 vim.g.have_nerd_font = false
-vim.o.colorcolumn = '80'
+vim.opt.colorcolumn = '80'
 
-vim.o.number = true
-vim.o.mouse = 'a'
-vim.o.showmode = false
+vim.opt.number = true
+vim.opt.relativenumber = true  
+vim.opt.mouse = 'a'
+vim.opt.showmode = false
 
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+  vim.opt.clipboard = 'unnamedplus'
 end)
 
-vim.o.breakindent = true
-vim.o.undofile = true
+vim.opt.breakindent = true
+vim.opt.undofile = true
 
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-vim.o.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes'
 
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
-vim.o.splitright = true
-vim.o.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
-vim.o.list = true
+vim.opt.list = true
 vim.opt.listchars = {
   tab = '» ',
   trail = '·',
   nbsp = '␣',
 }
 
-vim.o.inccommand = 'split'
+vim.opt.inccommand = 'split'
 
-vim.o.cursorline = true
-vim.o.scrolloff = 10
+vim.opt.cursorline = true
+vim.opt.scrolloff = 10
 
-vim.o.confirm = false
+vim.opt.confirm = false
 
 -- hardcoded identation options
 vim.opt.tabstop = 4
@@ -49,5 +51,5 @@ vim.opt.smartindent = true
 
 
 
--- TODO: Legacy syntax highlighting option, check if it still works for neovim
+-- TODO: Legacy syntax highlighting option, probably doesn't work with treesitter 
 -- vim.g.tex_fast = 'M'
